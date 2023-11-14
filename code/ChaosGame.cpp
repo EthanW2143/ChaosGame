@@ -20,6 +20,9 @@ int main()
 
     vector<Vector2f> vertices;
     vector<Vector2f> points;
+    sf::Font font;
+
+
 
 	while (window.isOpen())
 	{
