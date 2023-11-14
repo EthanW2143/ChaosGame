@@ -4,6 +4,8 @@
 #include <iostream>
 #include <sstream>
 #include <vector>
+#include <RectangleShape.hpp>
+
 
 // Make code easier to type with "using namespace"
 using namespace sf;
