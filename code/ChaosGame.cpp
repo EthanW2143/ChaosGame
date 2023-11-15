@@ -13,6 +13,22 @@ using namespace std;
 
 int main()
 {
+
+//Loads the font file
+sf::Font font;
+if (!font.loadFromFile("planet benson 2.ttf"))
+{
+    cout << "Error loading font file" << endl;
+}
+
+sf::Text text;
+text.setFont(font);
+text.setString("Click on any 3 points on your screen");
+text.setCharacterSize(24);
+text.setFillColor(sf::Color::Red);
+text.setStyle(sf::Text::Bold | sf::Text::Underlined);
+
+	
     // Create a video mode object
 	VideoMode vm(1920, 1080);
 	// Create and open a window for the game
@@ -85,6 +101,7 @@ int main()
         window.clear();
         for(int i = 0; i < vertices.size(); i++)
         {
+	    window.draw(text);
             RectangleShape rect(Vector2f(10,10));
             rect.setPosition(Vector2f(vertices[i].x, vertices[i].y));
             rect.setFillColor(Color::Blue);
