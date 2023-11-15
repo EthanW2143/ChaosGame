@@ -18,7 +18,7 @@ int main()
 sf::Font font;
 if (!font.loadFromFile("planet benson 2.ttf"))
 {
-    cout << "Error loading font file" << endl;
+    cout << "Error loading font file" << endl; // Throw error instead of cout
 }
 
 sf::Text text;
@@ -36,7 +36,20 @@ text.setStyle(sf::Text::Bold | sf::Text::Underlined);
 
     vector<Vector2f> vertices;
     vector<Vector2f> points;
-    sf::Font font;
+	
+	//Loads the font file
+	sf::Font font;
+	if (!font.loadFromFile("planet benson 2.ttf"))
+	{
+    	cout << "Error loading font file" << endl; // Throw error instead of cout
+	}
+
+	sf::Text text;
+	text.setFont(font);
+	text.setString("Click on any 3 points on your screen");
+	text.setCharacterSize(24);
+	text.setFillColor(sf::Color::Red);
+	text.setStyle(sf::Text::Bold | sf::Text::Underlined);
 
 
 
