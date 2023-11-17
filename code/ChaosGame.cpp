@@ -110,6 +110,14 @@ text.setStyle(sf::Text::Bold | sf::Text::Underlined);
             rect.setFillColor(Color::Blue);
             window.draw(rect);
         }
+        for (int i = 0; i < points.size(); i++)
+        {
+            CircleShape circle(2);
+            circle.setPosition(points[i]);
+            circle.setFillColor(Color::Red);
+            window.draw(circle);
+         }
+
         window.display();
     }
 }
