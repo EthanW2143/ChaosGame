@@ -85,9 +85,14 @@ text.setStyle(sf::Text::Bold | sf::Text::Underlined);
         if(points.size() > 0)
         {
             ///generate more point(s)
+		Vector2f lastPoint = points.back(); //At the start of the algorithm, should be 4th mouseclick
             ///select random vertex
+		Vector2f randomVertex = vertices[rand() % vertices.size()];
             ///calculate midpoint between random vertex and the last point in the vector
+		//Initializes a Vector2f variable midPoint with x-mid and y-mid
+		Vector2f midpoint((randomVertex.x + lastPoint.x) / 2, (randomVertex.y + lastPoint.y) / 2); 
             ///push back the newly generated coord.
+		points.push_back(midpoint);
         }
 
         /*
