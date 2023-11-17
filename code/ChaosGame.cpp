@@ -104,7 +104,7 @@ text.setStyle(sf::Text::Bold | sf::Text::Underlined);
         window.clear();
         for(int i = 0; i < vertices.size(); i++)
         {
-	    window.draw(text);
+	    //window.draw(text);
             RectangleShape rect(Vector2f(10,10));
             rect.setPosition(Vector2f(vertices[i].x, vertices[i].y));
             rect.setFillColor(Color::Blue);
@@ -117,7 +117,7 @@ text.setStyle(sf::Text::Bold | sf::Text::Underlined);
             circle.setFillColor(Color::Red);
             window.draw(circle);
          }
-
+	window.draw(text);
         window.display();
     }
 }
