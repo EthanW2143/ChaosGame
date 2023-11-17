@@ -68,6 +68,7 @@ text.setStyle(sf::Text::Bold | sf::Text::Underlined);
                     {
                         ///fourth click
                         ///push back to points vector
+			    text.setString("Click on a 4th point to start the game!");
 			    points.push_back(Vector2f(event.mouseButton.x, event.mouseButton.y));
                     }
                 }
